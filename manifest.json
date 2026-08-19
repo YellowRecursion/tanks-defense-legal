@@ -11,6 +11,7 @@
     },
     "privacy": {
       "currentVersion": 1,
+      "requiredAcceptanceVersion": 1,
       "effectiveAt": "2026-08-19T00:00:00Z",
       "locales": {
         "ru": "documents/privacy/v1/ru.md",

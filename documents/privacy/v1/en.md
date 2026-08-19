@@ -85,13 +85,15 @@
 
 6.1. The current version of this Policy is published at [tanksdefense.com/privacy](https://tanksdefense.com/privacy). The Controller may update this Policy to reflect changes to the Service or applicable law. A new version applies from the date stated in it, but not before it is published.
 
-6.2. The Controller will provide notice of material changes affecting the categories of data, the purposes of processing, or the User's rights through one or more available methods, including a notification in the game or on the website. If consent is required by law for new processing, it will be requested separately before that processing begins.
+6.2. The Controller will provide notice when a new version is published through one or more available methods, including a notification in the game or on the website. If changes materially affect the categories of data, the purposes of processing, or the User's rights, the game will ask the User to review the Policy again and expressly acknowledge it the next time the User connects to the Service.
 
-6.3. Previous versions of this Policy are retained in a GitHub repository and are available through the link provided on the document page.
+6.3. The version of the Policy acknowledged by the User is stored only locally on the device and is not stored in the User's server-side Account. The game may therefore request acknowledgment again after reinstallation, deletion of local app data, or use of another device. This acknowledgment does not by itself replace separate consent to data processing: where such consent is required by law for new processing, the Controller will request it before that processing begins.
 
-6.4. The Russian-language version of this Policy is the original. Translations are provided for convenience. If there is any conflict, the Russian-language version prevails unless mandatory applicable law requires otherwise.
+6.4. Previous versions of this Policy are retained in a GitHub repository and are available through the link provided on the document page.
 
-6.5. For questions about data processing or exercising their rights, the User may contact the Controller through the support page or by email:
+6.5. The Russian-language version of this Policy is the original. Translations are provided for convenience. If there is any conflict, the Russian-language version prevails unless mandatory applicable law requires otherwise.
+
+6.6. For questions about data processing or exercising their rights, the User may contact the Controller through the support page or by email:
 
 **Controller:** Vadim Flyurovich Zinnatullin  
 **Developer and publisher:** Green Box Team  

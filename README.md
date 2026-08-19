@@ -18,33 +18,38 @@ Published versions are immutable. Changes to a published document are released a
 
 ### Manifest fields
 
-- `schemaVersion` — version of the manifest format. Increment it only when the structure or meaning of the manifest itself changes.
 - `documents` — documents indexed by stable technical identifiers: `terms`, `privacy`, and `offer`.
 - `currentVersion` — latest published version of a document. Its file is stored in the corresponding `vN` directory.
 - `effectiveAt` — date and time from which the current version applies, in ISO 8601 format with a time-zone offset.
 - `locales` — mapping from a locale code to the Markdown file of the current version.
-- `requiredAcceptanceVersion` — latest Terms of Service version that requires explicit acceptance by the user. This field is used only for `terms`, never decreases, and must not be greater than `currentVersion`.
+- `requiredAcceptanceVersion` — latest version that requires a new confirmation by the user. This field is used for `terms` and `privacy`, never decreases, and must not be greater than `currentVersion`.
 
-`requiredAcceptanceVersion` is separate from `currentVersion` because not every published change requires another confirmation. For example:
+`requiredAcceptanceVersion` is separate from `currentVersion` because not every published change requires another confirmation. For example, for the Terms of Service:
 
 - version 1 is initially published: `currentVersion = 1`, `requiredAcceptanceVersion = 1`;
 - version 2 only fixes wording or formatting: `currentVersion = 2`, `requiredAcceptanceVersion = 1`;
 - version 3 materially changes user rights or obligations: `currentVersion = 3`, `requiredAcceptanceVersion = 3`.
 
-The game must request explicit acceptance when the version previously accepted by the user is lower than `requiredAcceptanceVersion`:
+The game must request explicit acceptance of the Terms of Service when the locally stored accepted version is lower than `requiredAcceptanceVersion`:
 
 ```text
 acceptedTermsVersion < requiredAcceptanceVersion
 ```
 
-The Privacy Policy does not use this field: a separate notice or consent is requested when required by law. Purchase Terms are accepted for each purchase, and the version applicable to that purchase should be recorded with the payment.
+The same comparison applies to the Privacy Policy, but it requests renewed acknowledgment rather than treating the Policy itself as consent to every form of data processing:
+
+```text
+acknowledgedPrivacyVersion < requiredAcceptanceVersion
+```
+
+Both values are stored only locally on the user's device and are not stored in the server-side game account. Reinstallation, deletion of local app data, or use of another device may therefore cause the game to request confirmation again. Purchase Terms are accepted for each purchase.
 
 ### Publishing a new version
 
 1. Create a new `documents/<document>/vN/` directory. Never overwrite a published file.
 2. Add the original Russian document as `ru.md`. Add translations to the same version directory using their locale codes, for example `en.md`.
 3. In the same commit, update `currentVersion`, `effectiveAt`, and every applicable path in `locales`.
-4. For a material Terms of Service change requiring explicit acceptance, also set `requiredAcceptanceVersion` to the new `currentVersion`. Leave it unchanged for editorial or technical changes.
+4. For a material Terms of Service or Privacy Policy change requiring a new confirmation, also set `requiredAcceptanceVersion` to the new `currentVersion`. Leave it unchanged for editorial or technical changes.
 5. Before publishing, validate the JSON and ensure every path referenced by the manifest exists and points to a non-empty file.
 
 If the manifest or any referenced document is invalid or unavailable, the backend must continue serving its previous valid cached snapshot.
