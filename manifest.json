@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "documents": {
+    "terms": {
+      "currentVersion": 1,
+      "requiredAcceptanceVersion": 1,
+      "effectiveAt": "2026-08-18T00:00:00+05:00",
+      "locales": {
+        "ru": "documents/terms/v1/ru.md"
+      }
+    },
+    "privacy": {
+      "currentVersion": 1,
+      "effectiveAt": "2026-08-19T00:00:00+05:00",
+      "locales": {
+        "ru": "documents/privacy/v1/ru.md"
+      }
+    },
+    "offer": {
+      "currentVersion": 1,
+      "effectiveAt": "2026-08-18T00:00:00+05:00",
+      "locales": {
+        "ru": "documents/offer/v1/ru.md"
+      }
+    }
+  }
+}
