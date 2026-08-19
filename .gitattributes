@@ -1,5 +1,8 @@
 * text=auto
 
+<<<<<<< HEAD
 .gitattributes text eol=lf
+=======
+>>>>>>> 119ce2e7c5955e767a351a1c3cbdd60def99f855
 *.md text eol=lf
 *.json text eol=lf
