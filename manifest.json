@@ -1,10 +1,9 @@
 {
-  "schemaVersion": 1,
   "documents": {
     "terms": {
       "currentVersion": 1,
       "requiredAcceptanceVersion": 1,
-      "effectiveAt": "2026-08-19T00:00:00+05:00",
+      "effectiveAt": "2026-08-19T00:00:00Z",
       "locales": {
         "ru": "documents/terms/v1/ru.md",
         "en": "documents/terms/v1/en.md"
@@ -12,7 +11,7 @@
     },
     "privacy": {
       "currentVersion": 1,
-      "effectiveAt": "2026-08-19T00:00:00+05:00",
+      "effectiveAt": "2026-08-19T00:00:00Z",
       "locales": {
         "ru": "documents/privacy/v1/ru.md",
         "en": "documents/privacy/v1/en.md"
@@ -20,7 +19,7 @@
     },
     "offer": {
       "currentVersion": 1,
-      "effectiveAt": "2026-08-19T00:00:00+05:00",
+      "effectiveAt": "2026-08-19T00:00:00Z",
       "locales": {
         "ru": "documents/offer/v1/ru.md",
         "en": "documents/offer/v1/en.md"
